@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     margin: 0;
     display: grid;
@@ -26,18 +25,13 @@ body {
 }
 
 .logo {
-    width: 100px; /* Adjust the size as needed */
+    width: 100px;
     height: auto;
 }
 
 .container_label_header {
     flex-grow: 1;
     text-align: center;
-}
-
-.heading_header {
-    margin: 0;
-    font-size: 24px; /* Adjust the size as needed */
 }
 
 .heading_header {
@@ -60,7 +54,6 @@ body {
     padding: 10px;
     color: #fdfdfd;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .links_container_inHeader a:hover {
@@ -69,8 +62,8 @@ body {
 }
 
 .nav_header {
-    position: relative; /* Ensure .nav_header is positioned */
-    z-index: 10; /* Set a high z-index to make it clickable */
+    position: relative;
+    z-index: 10;
     grid-row: 2;
     grid-column: 1;
     display: flex;
@@ -78,9 +71,9 @@ body {
     width: 15%;
     padding: 30px;
     background-image: url("./carsImages/bg-nav.jpg");
-    background-size: cover; /* Make the background image cover the entire element */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .nav_header a {
@@ -115,6 +108,7 @@ body {
     color: #f60000;
 }
 
+
 /***************************************** PROFILE *********************************************************/
 .main_profile {
     grid-row: 2;
@@ -133,8 +127,6 @@ body {
     color: #fff;
     padding: 10px;
     text-align: center;
-
-
 }
 
 .footer_title {
@@ -184,7 +176,6 @@ body {
 .legendRegisterStep2 {
     display: flex;
 }
-
 
 .main_register_step_3 {
     grid-row: 2;
@@ -269,12 +260,12 @@ body {
 
 .lblAtTheTopRegister {
     background-color: #ffffff;
-    text-align: center; /* Centers text horizontally */
+    text-align: center;
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 50px; /* Example height for the label */
-    border: 1px solid #988989; /* Example border */
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #988989;
     font-family: "Agency FB";
     font-weight: bold;
     font-size: 30px;
@@ -413,7 +404,6 @@ body {
     grid-column: 1;
     padding-top: 30px;
     padding-left: 400px;
-
 }
 
 .card-container {
@@ -456,27 +446,6 @@ body {
 
 
 /************************************************* Home page **********************************************************/
-
-/*.filter-section {*/
-/*    background-color: white;*/
-/*    border-radius: 8px;*/
-
-
-/*    width: 100%;*/
-/*    max-width: 1200px;*/
-/*    margin-bottom: 20px;*/
-
-/*    display: ruby;*/
-/*}*/
-
-/*#formFilter {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    gap: 10px;*/
-/*    padding: 10px;*/
-/*    padding-right: 20px;*/
-/*}*/
-
 .main-Home {
     grid-row: 2;
     grid-column: 1;
@@ -497,26 +466,7 @@ body {
     flex-shrink: 0;
 }
 
-/*#formFilter {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    align-items: center;*/
-/*    gap: 10px;*/
-/*}*/
-
-/*#fieldSetFilter {*/
-/*    padding: 10px;*/
-/*    border-radius: 8px;*/
-/*    width: 100%;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*legend {*/
-/*    padding: 0 10px;*/
-/*    font-weight: bold;*/
-/*}*/
 .filter-row {
-    /*display: flex;*/
     align-items: center;
     gap: 10px;
     flex: 1;
@@ -539,8 +489,6 @@ body {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-
 }
 
 table {
@@ -567,7 +515,6 @@ th, td {
     padding-left: 350px;
     margin-bottom: 30px;
     margin-right: 40px;
-
 }
 
 .body-table-return-car tr:nth-child(odd) {
@@ -587,7 +534,6 @@ th, td {
 .diesel {
     background-color: #dff0d8;
     color: #597e57;
-
 }
 
 .electric {
@@ -601,7 +547,6 @@ th, td {
 }
 
 /************************************************* Add new location *************************************************-*************/
-
 .main-addNewLocation {
     grid-row: 2;
     grid-column: 1;
@@ -611,13 +556,11 @@ th, td {
 }
 
 /************************************************* Add new Car ********************************************************************/
-
 .main-addNewCar {
     grid-row: 2;
     grid-column: 1;
     padding-top: 30px;
     padding-left: 350px;
-
 }
 
 .legendAddCar {
@@ -625,11 +568,6 @@ th, td {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
-/*.form-group{*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
 
 label {
     margin-bottom: 10px;
@@ -659,10 +597,6 @@ input[type="file"] {
     margin-top: 5px;
 }
 
-
-/*.formAddCar {*/
-/*    padding: 0;*/
-/*}*/
 fieldset {
     border: 1px solid #000000;
     padding: 20px;
@@ -671,13 +605,6 @@ fieldset {
     /*width: 100%;*/
     max-width: 100%;
 }
-
-/*legend {*/
-/*    font-size: 1.2em;*/
-/*    font-weight: bold;*/
-/*    margin-bottom: 10px;*/
-
-/*}*/
 
 input[type="text"],
 input[type="number"],
@@ -703,13 +630,11 @@ input[type="tel"] {
     justify-content: center;
     align-items: center;
     margin-left: 330px;
-
-    height: 100%; /* Ensure main takes full height of the viewport */
+    height: 100%;
 }
 
 
 /******************************************************* Return a car *******************************************************************************/
-
 .main-returnCarFromManager {
 
     grid-row: 2;
@@ -743,7 +668,6 @@ input[type="tel"] {
 
 
 /******************************************************** Inquire Car  ****************************************************************/
-
 .main-carInquire{
     grid-row: 2;
     grid-column: 1;
@@ -761,7 +685,6 @@ table {
     border-collapse: collapse;
     border: 1px solid #ddd;
     text-align: center;
-
 }
 
 table th, table td {
@@ -773,16 +696,8 @@ table th {
     background-color: #f8820e;
 }
 
-/*table tr:nth-child(even) {*/
-/*    background-color: #dc985e;*/
-/*}*/
-
-/*table tr:hover {*/
-/*    background-color: #f4c294;*/
-/*}*/
 
 /********************************************* Car details specification  *********************************************************************************/
-
 hr {
     border: none;
     height: 1px;
@@ -832,10 +747,10 @@ hr {
 
 .car-details li {
     margin: 10px 0;
-    padding-left: 30px; /* Space for the image */
+    padding-left: 30px;
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: 20px 20px; /* Size of the custom bullet image */
+    background-size: 20px 20px;
 }
 
 .car-details .carID {
@@ -922,7 +837,6 @@ hr {
 }
 
 /************************************************ RENT CAR STEP 1 *************************************************/
-/* Form styles */
 .rent-car-section {
     background-color: #fff;
     padding: 30px;
@@ -931,14 +845,12 @@ hr {
 }
 
 .main-rent {
-
     grid-row: 2;
     grid-column: 1;
     justify-content: center;
     align-items: center;
     width: 10%;
     padding-left: 300px;
-
 }
 
 .main-rent-step1 {
@@ -956,7 +868,6 @@ legend {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
-
 }
 
 .div-pickupDate {
@@ -1006,8 +917,6 @@ select {
 
 
 /************************************************** RENT A CAR STEP 2 *************************************************/
-
-
 .containerRentStepTwo {
     grid-row: 2;
     grid-column: 2;
@@ -1039,12 +948,11 @@ hr {
 .invoice-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Optional: vertically center the items */
+    align-items: center;
 }
 
 .label_in_rent_car_step_two {
     font-weight: bold;
-    font-size: 14px;
     margin-bottom: 30px;
     background-color: transparent;
     border: none;
@@ -1053,7 +961,6 @@ hr {
 
 .valueInRentStepTwo {
     font-weight: bold;
-    font-size: 14px;
     margin-bottom: 30px;
     background-color: transparent;
     border: none;
@@ -1064,21 +971,17 @@ hr {
 
 
 .invoiceID, .customerID {
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 .payment-section h2 {
     margin-bottom: 20px;
 }
 
-/*.form-group {*/
-/*    margin-bottom: 15px;*/
-/*}*/
 
 .card-type {
     font-weight: bold;
     display: block;
-
     text-align: center;
 }
 
@@ -1089,7 +992,6 @@ input[type="month"] {
     padding: 8px;
     font-size: 16px;
     border-radius: 4px;
-
 }
 
 input[type="radio"],
@@ -1097,10 +999,9 @@ input[type="checkbox"] {
     padding: 50px;
 }
 
-
 .card-options {
     display: flex;
-    justify-content: center; /* Adjust alignment as needed */
+    justify-content: center;
 }
 
 .card-option {
@@ -1205,8 +1106,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     outline: none;
-    background-color: #f0f8ff; /* Light blue background when focused */
-    border-color: #6495ed; /* Change border color when focused */
+    background-color: #f0f8ff;
 }
 
 input, textarea, select {
