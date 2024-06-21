@@ -1,44 +1,29 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    width: 80%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-header {
-    margin-bottom: 20px;
-}
-
-.submit-button {
-    background-color: #1a73e8;
-    color: #fff;
-    border: 2px solid #1a73e8;
+/* Basic link style */
+.link-btn {
+    display: inline-block;
     padding: 10px 20px;
-    border-radius: 5px;
     font-size: 16px;
+    color: white;
+    background-color: #252565;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    display: inline-flex;
-    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+/* Style when link is hovered */
+.link-btn:hover {
+    background-color: darkblue;
+}
 
+/* Style when link is clicked (active) */
+.link-btn:active {
+    background-color: navy;
+    transform: scale(0.95);
+}
 
-
-.submit-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+/* Style when link is focused */
+.link-btn:focus {
+    outline: 2px solid orange;
 }
