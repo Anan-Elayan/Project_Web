@@ -34,7 +34,7 @@ try {
     JOIN  locations rll ON c.locationID = rll.id
     WHERE r.customerID = :customerID
     ORDER BY 
-        r.rentStartDate DESC";
+        i.id DESC";
 
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':customerID', $customerObj['id']);
