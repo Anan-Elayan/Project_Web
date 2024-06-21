@@ -89,12 +89,12 @@ my_header();
                                 <img src="./carsImages/returnCar.png" alt="Submit Icon">Return
                             </button>
                         </form>
-                        <form method="get" action="updateCar.php">
-                            <button type="submit" name="carID" value="<?php echo htmlspecialchars($rentals['carID']); ?>" class="submit-button">
-                                <img src="./carsImages/returnCar.png" alt="Submit Icon">Update
-                            </button>
-
-                        </form>
+<!--                        <form method="get" action="updateCar.php">-->
+<!--                            <button type="submit" name="carID" value="--><?php //echo htmlspecialchars($rentals['carID']); ?><!--" class="submit-button">-->
+<!--                                <img src="./carsImages/returnCar.png" alt="Submit Icon">Update-->
+<!--                            </button>-->
+<!---->
+<!--                        </form>-->
                     </td>
                 </tr>
             <?php endforeach; ?>
