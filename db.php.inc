@@ -17,6 +17,7 @@ function connectionDataBase($dbname = DBNAME, $dbhost = DBHOST, $dbpass = DBPASS
     }
 }
 
+
 function my_header()
 {
     if (session_status() === PHP_SESSION_NONE) {
@@ -31,7 +32,7 @@ function my_header()
             <h1 class="heading_header">Birzeit Car Rental Agency</h1>
         </div>
         <div class="links_container_inHeader">
-            <a href="aboutUs.php">About us</a>
+
             <?php if (isset($_SESSION['user']) && $_SESSION['user']): ?>
                 <a class="profile" href="profile.php"><?php echo $_SESSION['user']['userName'];?></a>
                 <a class="logout" href="logout.php">Logout</a>
@@ -40,6 +41,7 @@ function my_header()
                 <a class="register" href="register_step_1.php">Register</a>
             <?php endif; ?>
             <a class="" href="">Cart</a>
+            <a href="aboutUs.php">About us</a>
         </div>
     </header>
 

@@ -5,11 +5,6 @@ include('car.php');
 // Connect to the database
 $conn = connectionDataBase();
 
-// Define default sorting column and direction
-// $sortColumn = isset($_GET['sort']) ? $_GET['sort'] : 'pricePerDay';
-// $sortDirection = isset($_GET['dir']) ? $_GET['dir'] : 'ASC';
-
-
 // Initialize default query
 $query = "
     SELECT c.*, l.pickupName 
@@ -18,19 +13,10 @@ $query = "
         INNER JOIN locations l ON l.id = c.locationID WHERE c.carStatus=1
 ";
 
-//WHERE c.carStatus = 0
-//AND c.pricePerDay BETWEEN 200 AND 1000
-//AND l.pickupName LIKE '%birzeit%'
-//AND r.rentStartDate BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 DAY)
-
-
 $params = [];
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Initialize default query
-
-// or (r.rentStartDSate is null or r.rentEndDate)
     if (!empty($_POST['availableStartDate']) && !empty($_POST['availableEndDate'])) {
         $query .= ' AND (DATE(r.rentStartDate) > :availableEndDate OR DATE(r.rentEndDate) < :availableStartDate or r.rentStartDate is null or r.rentEndDate)';
         $parameters[':availableStartDate'] = $_POST['availableStartDate'];
@@ -50,17 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setcookie('carType', $_POST['carType']);
     } else {
         $query .= " AND c.type = 'sedan'";
-        // setcookie('carType', '', time() - 3600, "/");
     }
-//
-//
+
     if (!empty($_POST['minPriceRange'])) {
         $query .= " AND c.pricePerDay >= :minPrice";
         $params[':minPrice'] = (int)$_POST['minPriceRange'];
         setcookie('minPriceRange', $_POST['minPriceRange']);
     } else {
         $query .= " AND c.pricePerDay >=200 ";
-        //setcookie('minPriceRange', '', time() - 3600, "/");
     }
 
     if (!empty($_POST['maxPriceRange'])) {
@@ -69,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setcookie('maxPriceRange', $_POST['maxPriceRange']);
     } else {
         $query .= " AND c.pricePerDay <=1000";
-        //setcookie('maxPriceRange', '', time() - 3600, "/");
     }
 
     if (!empty($_POST['pickUpLocation'])) {
@@ -78,22 +60,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setcookie('pickUpLocation', $_POST['pickUpLocation']);
     } else {
         $query .= " AND l.pickupName = 'Birzeit' ";
-        // setcookie('pickUpLocation', '', time() - 3600, "/");
     }
 
     if (!empty($_POST['selectedCars'])) {
-        // Initialize the placeholders array
         $placeholders = [];
         $params = [];
 
-        // Create a unique placeholder for each car ID
         foreach ($_POST['selectedCars'] as $index => $car) {
             $key = ":carID" . $index;
             $placeholders[] = $key;
             $params[$key] = (int)$car;
         }
 
-        // Start building the IN clause
         $inClause = '';
         foreach ($placeholders as $placeholder) {
             if ($inClause !== '') {
@@ -102,13 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $inClause .= $placeholder;
         }
 
-        // Add the IN clause to the query
         $query .= " AND c.id IN (" . $inClause . ")";
     }
-
 }
 
-// TOdo
 if (!empty($_GET['sortBy'])) {
     if ($_GET['sortBy'] == 'type') {
         $query .= " ORDER BY c.type ASC";
@@ -119,18 +94,10 @@ if (!empty($_GET['sortBy'])) {
     }
 }
 
-
-// Prepare and execute the SQL statement
 $stmt = $conn->prepare($query);
 $stmt->execute($params);
 
-//var_dump($stmt);
-//die();
-
-// Fetch all results
 $cars = $stmt->fetchAll();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -218,7 +185,7 @@ my_header();
                         <th><a href="?sortBy=type">Car Type</a></th>
                         <th><a href="?sortBy=fuel">Fuel Type</a></th>
                         <th>Car Photo</th>
-                        <?php if ($_SESSION['user']['isManager'] != 1): ?>
+                        <?php if (isset($_SESSION['user']) && isset($_SESSION['user']['isManager']) && $_SESSION['user']['isManager'] != 1): ?>
                             <th>Action</th>
                         <?php endif; ?>
                     </tr>
@@ -245,7 +212,7 @@ my_header();
                                     <figcaption><?php echo $car['model']; ?></figcaption>
                                 </figure>
                             </td>
-                            <?php if ($_SESSION['user']['isManager'] != 1): ?>
+                            <?php if (isset($_SESSION['user']) && isset($_SESSION['user']['isManager']) && $_SESSION['user']['isManager'] != 1): ?>
                                 <td>
                                     <a href="carDetailsSpecification.php?id=<?php echo($car['id']); ?>">Rent Now</a>
                                 </td>
