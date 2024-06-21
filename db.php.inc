@@ -31,9 +31,9 @@ function my_header()
             <h1 class="heading_header">Birzeit Car Rental Agency</h1>
         </div>
         <div class="links_container_inHeader">
-            <a href="">About us</a>
+            <a href="aboutUs.php">About us</a>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']): ?>
-                <a class="profile" href="profile.php">Profile</a>
+                <a class="profile" href="profile.php"><?php echo $_SESSION['user']['userName'];?></a>
                 <a class="logout" href="logout.php">Logout</a>
             <?php else: ?>
                 <a class="login" href="login.php">Login</a>
@@ -45,7 +45,7 @@ function my_header()
 
     <?php if (isset($_SESSION['user']) && $_SESSION['user']): ?>
     <nav class="nav_header">
-        <?php if ($_SESSION['user']['isManager'] === "1"): ?>
+        <?php if ($_SESSION['user']['isManager'] === 1): ?>
             <a class="home" href="index.php">Home</a>
             <a class="home" href="managerPanel.php">Panel</a>
         <?php else: ?>

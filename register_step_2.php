@@ -1,17 +1,31 @@
 <?php
+include('db.php.inc');
+$conn = connectionDataBase();
+
+$error_message = '';
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['password'] = $_POST['password'];
     $_SESSION['confirmPassword'] = $_POST['confirmPassword'];
 
-    // Check if passwords match
-    if ($_SESSION['password'] !== $_SESSION['confirmPassword']) {
-        echo "Passwords do not match.";
+
+
+    $stmt = $conn->prepare("SELECT * FROM users u WHERE u.userName = :userName");
+    $stmt->bindParam(':userName', $_POST['username']);
+    $stmt->execute();
+
+
+    $userName = $stmt->fetch();
+
+    if ($userName) {
+        $error_message =  'The user input already exists Please try agin !';
+
+    }else{
+        header("Location: register_step_3.php");
         exit();
     }
-    header("Location: register_step_3.php");
-    exit();
+
 }
 ?>
 <!DOCTYPE html>
@@ -26,13 +40,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 <?php
-include('db.php.inc');
 my_header();
 ?>
 <main class="main_register_step_2">
+
+
+
+
     <form action="" method="POST">
         <fieldset>
             <legend class="legendRegisterStep2"> User Name and password</legend>
+            <?php if (!empty($error_message)): ?>
+                <h2 style="color:red"><?php echo $error_message; ?></h2>
+            <?php endif; ?>
+
             <div class="container_register_step_2">
                 <div class="filter-row">
                     <label for="username">Username</label>
