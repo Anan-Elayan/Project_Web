@@ -1,0 +1,1216 @@
+/* General Styles */
+body {
+    margin: 0;
+    display: grid;
+    font-size: 15px;
+}
+
+
+/******************************************* HEADER AND NAV**********************************************/
+.header {
+    display: flex;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-bottom-right-radius: 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+}
+
+.container_label_header {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.heading_header {
+    margin: 0;
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+.heading_header {
+    margin: 0;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.links_container_inHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links_container_inHeader a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fdfdfd;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.links_container_inHeader a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.nav_header {
+    position: relative; /* Ensure .nav_header is positioned */
+    z-index: 10; /* Set a high z-index to make it clickable */
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding: 30px;
+    background-image: url("./carsImages/bg-nav.jpg");
+    background-size: cover; /* Make the background image cover the entire element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+.nav_header a {
+    display: block;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav_header a:hover {
+    background-color: #555555;
+    color: #e3811d;
+}
+
+.links_container a {
+    color: #fdfdfd;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #f58211;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.links_container a:hover {
+    background-color: #000000;
+    color: #f60000;
+}
+
+/***************************************** PROFILE *********************************************************/
+.main_profile {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    width: 80%;
+}
+
+
+/***************************************** FOOTER *********************************************************/
+.containerFooter {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+
+}
+
+.footer_title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer_title span {
+    color: #f8820e;
+}
+
+.nav_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_footer p,
+.nav_footer small {
+    margin: 0.2em 0;
+    font-size: 1em;
+}
+
+.nav_footer a {
+    color: #0048ff;
+}
+
+
+/********************************* registration ***********************************************************************/
+.main_register {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_register_step_2 {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    display: flex;
+}
+
+.container_register_step_2 {
+    align-items: center;
+}
+
+.legendRegisterStep2 {
+    display: flex;
+}
+
+
+.main_register_step_3 {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+}
+
+.lblRegisterStep3 {
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.lblValueRegisterStep3 {
+    background-color: white;
+    color: #ff0202;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    font-size: 20px;
+}
+
+.divRegisterStep3 {
+    padding-top: 20px;
+}
+
+.div_confirmation_register {
+    align-items: center;
+    background-color: #d3d1d1;
+    height: 300px;
+    align-content: center;
+}
+
+.main_confirmation {
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-left: 350px;
+    text-align: center;
+    height: 300px;
+    padding-bottom: 50px;
+}
+
+.container_registration {
+    background-color: #cacaca;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+    align-content: center;
+    align-items: center;
+}
+
+.main-registration {
+    grid-row: 2;
+    grid-column: 2;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.div_name,
+.div_address,
+.div_creditCard {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    margin-top: 25px;
+    margin: 10px;
+}
+
+.lblAtTheTopRegister {
+    background-color: #ffffff;
+    text-align: center; /* Centers text horizontally */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 50px; /* Example height for the label */
+    border: 1px solid #988989; /* Example border */
+    font-family: "Agency FB";
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.main_register label {
+    font-weight: bold;
+    margin-top: 0.5em;
+    display: block;
+    color: #333;
+}
+
+.main_register input[type="text"],
+.main_register input[type="date"],
+.main_register input[type="number"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    border: 1px solid #020202;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.main_register p {
+    margin: 0;
+}
+
+.main_register div {
+    margin-bottom: 1em;
+}
+
+
+/****************************************** LOGIN ************************************************/
+.main_login {
+    flex: 1;
+    padding: 1em;
+    background-color: #f8f8f8;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_login {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    background-image: url('carsImages/backgrounf_footer.jpg');
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.container_login h2 {
+    color: #e68012;
+}
+
+
+.welcome_back {
+    align-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.divUserNameLogin {
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.divUserNameLogin label {
+    font-style: italic;
+    border: none;
+    background-color: transparent;
+}
+
+.welcome_back label {
+    font-style: italic;
+    border: none;
+    font-size: 80px;
+    font-family: Aldhabi;
+    background-color: transparent;
+}
+
+.container_login input[type="text"],
+.container_login input[type="password"],
+.container input[type="password"],
+.container input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.submit-button {
+    width: 100%;
+    background-color: #333;
+    color: #f88112;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.submit-button:hover {
+    background-color: #f8820e;
+    color: black;
+}
+
+
+/************************************ Manager panel ********************************************************************************************/
+.main-ManagerPanel {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 400px;
+
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(rgba(205, 122, 18, 0.9), rgba(255, 165, 0, 0.9));
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 10px 16px rgba(135, 133, 133, 0.9);
+}
+
+.card:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/************************************************* Home page **********************************************************/
+
+/*.filter-section {*/
+/*    background-color: white;*/
+/*    border-radius: 8px;*/
+
+
+/*    width: 100%;*/
+/*    max-width: 1200px;*/
+/*    margin-bottom: 20px;*/
+
+/*    display: ruby;*/
+/*}*/
+
+/*#formFilter {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    padding: 10px;*/
+/*    padding-right: 20px;*/
+/*}*/
+
+.main-Home {
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 400px;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-row label {
+    flex-shrink: 0;
+}
+
+/*#formFilter {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    align-items: center;*/
+/*    gap: 10px;*/
+/*}*/
+
+/*#fieldSetFilter {*/
+/*    padding: 10px;*/
+/*    border-radius: 8px;*/
+/*    width: 100%;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*legend {*/
+/*    padding: 0 10px;*/
+/*    font-weight: bold;*/
+/*}*/
+.filter-row {
+    /*display: flex;*/
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    padding: 8px;
+    width: 100%;
+}
+
+.filter-row input[type="date"],
+.filter-row input[type="text"],
+.filter-row input[type="number"],
+.filter-row select {
+    flex-grow: 1;
+}
+
+
+.cars-list {
+    grid-row: 2;
+    grid-column: 3;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.main-returnCar {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+
+}
+
+.body-table-return-car tr:nth-child(odd) {
+    background-color: #d3c8c8;
+}
+
+.body-table-return-car tr:nth-child(even) {
+    background-color: #bdafaf;
+}
+
+
+.petrol {
+    background-color: #e1cece;
+    color: #c84d4d;
+}
+
+.diesel {
+    background-color: #dff0d8;
+    color: #597e57;
+
+}
+
+.electric {
+    background-color: #d9edf7;
+    color: #31708f;
+}
+
+.hybrid {
+    background-color: #efeacb;
+    color: #8a6d3b;
+}
+
+/************************************************* Add new location *************************************************-*************/
+
+.main-addNewLocation {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    width: 80%;
+}
+
+/************************************************* Add new Car ********************************************************************/
+
+.main-addNewCar {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+
+}
+
+.legendAddCar {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*.form-group{*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+
+label {
+    margin-bottom: 10px;
+    border: 1px solid #050505;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #dad8d8;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    width: calc(100% - 16px);;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+}
+
+
+/*.formAddCar {*/
+/*    padding: 0;*/
+/*}*/
+fieldset {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    /*width: 100%;*/
+    max-width: 100%;
+}
+
+/*legend {*/
+/*    font-size: 1.2em;*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 10px;*/
+
+/*}*/
+
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #090909;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.text_success {
+    text-align: center;
+    color: #f8820d;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.main-addCar {
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 330px;
+
+    height: 100%; /* Ensure main takes full height of the viewport */
+}
+
+
+/******************************************************* Return a car *******************************************************************************/
+
+.main-returnCarFromManager {
+
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.main-returnCarManager{
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 295px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    width: 78%;
+}
+.car-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.car-card p {
+    margin-bottom: 5px;
+}
+
+.car-card form {
+    margin-top: 10px;
+}
+
+
+/******************************************************** Inquire Car  ****************************************************************/
+
+.main-carInquire{
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    width: 80%;
+    margin-bottom: 30px;
+}
+.formInquireCar {
+    margin: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    text-align: center;
+
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f8820e;
+}
+
+/*table tr:nth-child(even) {*/
+/*    background-color: #dc985e;*/
+/*}*/
+
+/*table tr:hover {*/
+/*    background-color: #f4c294;*/
+/*}*/
+
+/********************************************* Car details specification  *********************************************************************************/
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.main-index, .main_login {
+    grid-row: 2;
+    grid-column: 2;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.car-card {
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.left-column, .right-column {
+    padding: 50px;
+}
+
+.left-column {
+    flex: 1;
+
+    border-right: 1px solid #ccc;
+}
+
+.right-column {
+    flex: 2;
+    margin: 120px;
+}
+
+.car-image img {
+    width: 450px;
+}
+
+.car-details {
+    list-style: none;
+    padding: 0;
+}
+
+.car-details li {
+    margin: 10px 0;
+    padding-left: 30px; /* Space for the image */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Size of the custom bullet image */
+}
+
+.car-details .carID {
+    background-image: url('./carsImages/id_number.png');
+}
+
+.car-details .carType {
+    background-image: url('./carsImages/type.png');
+}
+
+.car-details .carModel {
+    background-image: url('./carsImages/model.png');
+}
+
+.car-details .carMake {
+    background-image: url('./carsImages/make.png');
+}
+
+.car-details .carRegistrationYear {
+    background-image: url('./carsImages/Registration Year.png');
+}
+
+.car-details .carColor {
+    background-image: url('./carsImages/color.png');
+}
+
+.car-details .Description {
+    background-image: url('./carsImages/Description.png');
+}
+
+.car-details .PriceperDay {
+    background-image: url('carsImages/PriceperDay.png');
+}
+
+.car-details .CapacityPeople {
+    background-image: url('carsImages/Capacity People.png');
+}
+
+.car-details .CapacitySuitcases {
+    background-image: url('carsImages/Capacity Suitcases.png');
+}
+
+.car-details .FuelType {
+    background-image: url('carsImages/Fuel Type.png');
+}
+
+.car-details .AverageConsumption {
+    background-image: url('carsImages/Average Consumption.png');
+}
+
+.car-details .Horsepower {
+    background-image: url('carsImages/Horsepower.png');
+}
+
+.car-details .Length {
+    background-image: url('carsImages/Length.png');
+}
+
+.car-details .Width {
+    background-image: url('carsImages/Width.png');
+}
+
+.car-details .GearType {
+    background-image: url('carsImages/Gear Type.png');
+}
+
+.car-details .Restrictions {
+    background-image: url('carsImages/Restrictions.png');
+}
+
+.car-details li .label_in_rent_car_step_two {
+    font-weight: bold;
+    color: #000;
+}
+
+.car-details li .value {
+    color: #555;
+}
+
+.car-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/************************************************ RENT CAR STEP 1 *************************************************/
+/* Form styles */
+.rent-car-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+
+.main-rent {
+
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    padding-left: 300px;
+
+}
+
+.main-rent-step1 {
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: center;
+    align-items: center;
+    padding-left: 390px;
+    padding-top: 20px;
+    max-width: 90%;
+}
+
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.div-pickupDate {
+    padding-top: 20px;
+}
+
+.div-returnDate {
+    padding-top: 20px;
+
+}
+
+.div-babySeatAndReturnLocation {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+.div-special {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.div-baby {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.div-insurance {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-left: 20px;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    margin-top: 5px;
+}
+
+
+/************************************************** RENT A CAR STEP 2 *************************************************/
+
+
+.containerRentStepTwo {
+    grid-row: 2;
+    grid-column: 2;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    width: 80%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.payment-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.40);
+}
+
+.invoiceID {
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 60px;
+}
+
+.invoice-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Optional: vertically center the items */
+}
+
+.label_in_rent_car_step_two {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.valueInRentStepTwo {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-family: "Arial Black";
+    font-style: italic;
+}
+
+
+.invoiceID, .customerID {
+    margin: 0; /* Remove default margins */
+}
+
+.payment-section h2 {
+    margin-bottom: 20px;
+}
+
+/*.form-group {*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+.card-type {
+    font-weight: bold;
+    display: block;
+
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="month"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    padding: 50px;
+}
+
+
+.card-options {
+    display: flex;
+    justify-content: center; /* Adjust alignment as needed */
+}
+
+.card-option {
+    background: linear-gradient(rgba(133, 133, 133, 0.9), rgba(223, 217, 211, 0.9));
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-option img {
+    width: 200px;
+    height: 200px;
+}
+
+.confirmationRent {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/*************************************************** View rented cars ****************************************************/
+.main-viewRentedCars {
+    grid-row: 2;
+    grid-column: 1;
+    padding-top: 30px;
+    padding-left: 350px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+.future {
+    background-color: #abe4f4;
+    color: black;
+}
+
+.current {
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+}
+
+.past {
+    background-color: lightgray;
+    color: black;
+    font-style: italic;
+}
+
+.divHighlightCurrent {
+    width: 12px;
+    height: 12px;
+    background-color: lightgreen;
+}
+
+.divHighlightPost {
+    width: 12px;
+    height: 12px;
+    background-color: lightgray;
+}
+
+.lblHighlight {
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.divHighlightFuture {
+    width: 12px;
+    height: 12px;
+    background-color: #abe4f4;
+}
+
+
+/********************************* Error message ********************/
+.error-message {
+    display: none;
+    color: #d8000c;
+    background-color: #ffbaba;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+input:invalid, textarea:invalid {
+    border-color: #d8000c;
+}
+
+input:invalid + .error-message, textarea:invalid + .error-message {
+    display: block;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    background-color: #f0f8ff; /* Light blue background when focused */
+    border-color: #6495ed; /* Change border color when focused */
+}
+
+input, textarea, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
